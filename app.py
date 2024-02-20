@@ -13,10 +13,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    """Loads the index.html page"""
     return render_template('index.html')
 
 @app.route('/calculate', methods=['POST'])
 def do_calculation():
+    """
+        Does the calculations to calculate the max, average and standard deviation
+        of a list of numbers
+    """
     num_list = MyMath()
     numbers_list = request.form['numbers'].split(",")
     title = "Here are your results:"
@@ -33,5 +38,7 @@ def do_calculation():
                         average=average,
                         std_deviation=std_deviation,
                         the_title=title,)
+
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
+    
