@@ -1,0 +1,61 @@
+body {
+    background: rgba(48, 48, 48, 0.312);
+}
+
+h1 {
+    color: #210f68;
+    font-size: 5rem;
+    text-align: center;
+}
+
+div#form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 50px auto;
+}
+
+div#form label {
+    width: 400px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #210f68;
+}
+
+div#form textarea {
+    height: 200px;
+    padding: 5px;
+    font-size: 1.3rem;
+}
+
+div#form button {
+    height: 50px;
+    width: 150px;
+    display: block;
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+div#results {
+    min-width: 500px;
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    padding: 50px;
+}
+
+a#back {
+    text-align: center;
+    display: block;
+    width: 100px;
+    margin: 0px auto;
+    background-color: #210f68;
+    color: white;
+    font-size: 1.3rem;
+    padding: 20px;
+    text-decoration: none;
+}
