@@ -36,8 +36,7 @@ def do_calculation():
                         num_list=num_list.num_list,
                         max=max_number,
                         average=average,
-                        std_deviation=std_deviation,
-                        the_title=title,)
+                        std_deviation=std_deviation,)
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
