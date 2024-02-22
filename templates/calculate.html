@@ -3,15 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculate Numbers</title>
+    <title>Jon's Math App</title>
     <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
-    <h1>{{the_title}}</h1>
-    <div id="results">
-        <p>After calculating the numbers: {{num_list}}</p>
-        <p>The max number is {{max}}, the average number is {{average}} and the standard deviation is {{std_deviation}}</p>
+    <header class="bg-primary"> 
+        <div class="header-logo">
+            <a href="https://jonspurling.ca">
+                <img id="banner-logo" src="../static/js-logo.png" alt="JavaScript logo used to reference Jonathan Spurling">
+            </a>
+        </div>
+        <div class="nav-container">
+            <ul class="menu">
+                <li><a class="menuItem" href="https://jonspurling.ca#about">About</a></li>
+                <li><a class="menuItem" href="https://jonspurling.ca#projects">Projects</a></li>
+                <li><a class="menuItem" href="https://jonspurling.ca#resume" >Resume</a></li>
+                <li><a class="menuItem" href="https://jonspurling.ca#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger">
+                <!-- material icons https://material.io/resources/icons/ -->
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+            </button>
+        </div>
+    </header>
+    <main>
+        <h1>Jon's Web Calculator</h1>
+        <h2>{{the_title}}</h2>
+            
+    <div id="container">
+        <p>After calculating the numbers: </p><br><b>{{num_list}}</b></p>
+        <br>
+        <ul id="results">
+            <li>
+                <p><b>Max Number: </b>{{max}}</p> 
+            </li>
+            <li>
+                <p><b>Average Number: </b>{{average}}</p>
+            </li>
+            <li>
+                <p><b>Standard Deviation: </b>{{std_deviation}}</p>
+            </li>
+        </ul>
+        
     </div>
-    <a id="back" href="/">Go back</a>
+        <a class="back" href="/">New Calculation</a>
+        <a class="other-projects" href="https://jonspurling.ca#projects">See my other projects</a>
+    </main>
+    <footer class="bg-primary">
+        <p>&copy; 2024 - Jonathan Spurling</p>
+    </footer>
 </body>
 </html>

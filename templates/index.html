@@ -5,17 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jon's Math App</title>
     <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
-    <h1>Jon's Web Calculator</h1>
+    <header class="bg-primary"> 
+        <div class="header-logo">
+            <a href="https://jonspurling.ca">
+                <img id="banner-logo" src="../static/js-logo.png" alt="JavaScript logo used to reference Jonathan Spurling">
+            </a>
+        </div>
+        <div class="nav-container">
+            <ul class="menu">
+                <li><a class="menuItem" href="https://jonspurling.ca#about">About</a></li>
+                <li><a class="menuItem" href="https://jonspurling.ca#projects">Projects</a></li>
+                <li><a class="menuItem" href="https://jonspurling.ca#resume" >Resume</a></li>
+                <li><a class="menuItem" href="https://jonspurling.ca#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger">
+                <!-- material icons https://material.io/resources/icons/ -->
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+            </button>
+        </div>
+    </header>
+    <main>
+        <h1>Jon's Web Calculator</h1>
+        <p>This application takes a list of numbers in the format of 1,2,3,4,etc.</p>
+        <p>It will then calculate the <i><b>max</b></i>, <i><b>average</b></i> and <i><b>standard deviation.</b></i></p>
 
-    <form action="/calculate" method="POST">
-        <div id="form">
-            <label for="textbox">Enter numbers separated by a ',' comma:</label>
-            <textarea name="numbers"></textarea>
-            <button type="submit">Calculate!</button>
+        <div id="container">
+            <form action="/calculate" method="POST">
+                <div id="form">
+                    <p>Enter numbers separated by a ',' comma:</p>
+                    <textarea name="numbers"></textarea>
+                    <button type="submit">Calculate!</button>
+                </div>
+            </form>
         </div>
         
-    </form>
+    
+        <a class="back" href="https://jonspurling.ca#projects">See my other projects</a>
+    </main>
+    <footer class="bg-primary">
+        <p>&copy; 2024 - Jonathan Spurling</p>
+    </footer>
 </body>
 </html>
