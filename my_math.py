@@ -17,7 +17,7 @@ class MyMath():
         """Function that takes a list of numbers and calculates the average."""
         average = sum(self.num_list) / len(self.num_list)
 
-        return average
+        return round(average, 2)
 
     def calculate_standard_deviation(self):
         """
