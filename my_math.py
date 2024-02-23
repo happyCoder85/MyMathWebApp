@@ -15,8 +15,12 @@ class MyMath():
 
     def calculate_average(self):
         """Function that takes a list of numbers and calculates the average."""
-        average = sum(self.num_list) / len(self.num_list)
-
+        try:
+            average = sum(self.num_list) / len(self.num_list)
+        except ValueError:
+            print('Value error')
+        
+        
         return round(average, 2)
 
     def calculate_standard_deviation(self):
@@ -24,10 +28,14 @@ class MyMath():
         Function that takes a list of numbers and then calculates and returns the 
         standard deviation
         """
-        # Calculate the mean of the self
-        mean = sum(self.num_list) / len(self.num_list)
-        # Calculate the variance
-        variance = sum((x - mean) ** 2 for x in self.num_list) / (len(self.num_list) - 1)
-        # Calculate the standard deviation
-        standard_deviation = round(variance ** 0.5, 2)
+        try:
+            # Calculate the mean of the self
+            mean = sum(self.num_list) / len(self.num_list)
+            # Calculate the variance
+            variance = sum((x - mean) ** 2 for x in self.num_list) / (len(self.num_list) - 1)
+            # Calculate the standard deviation
+            standard_deviation = round(variance ** 0.5, 2)
+        except Exception as e:
+            print("Error", e)
+            
         return standard_deviation
